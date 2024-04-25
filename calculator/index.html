@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <h1>Калькулятор треугольника</h1>
+    <label for="inputType">Выберите тип входных данных:</label>
+    <select id="inputType" >
+        <option value="sideCorner">Сторона и два прилежащих угла</option>
+        <option value="threeSides">Три стороны</option>
+    </select>
+    <button onclick="showInputFields()">Показать</button>
+<!-- img -->
+    <div class="imgTriangle sideCorner ">
+        <img src="./image//img1.jpg" alt="Треугольник 1">
+    </div>
+    
+    <div class="imgTriangle threeSides hidden">
+        <img src="./image//img2.jpg" alt="Треугольник 2">
+    </div>
+
+
+<!-- input -->
+
+    <div class="inputFields sideCorner ">
+        <label for="side">Сторона:</label>
+        <input type="number" id="side" name="side"><br>
+        <label for="corner1">Угол 1:</label>
+        <input type="number" id="angle1" name="angle1"><br>
+        <label for="corner2">Угол 2:</label>
+        <input type="number" id="angle2" name="angle2"><br>
+    </div>
+
+    <div class=" inputFields threeSides hidden ">
+        <label for="side1">Сторона1:</label>
+        <input type="number" id="side1" name="side1"><br>
+        <label for="side2">Сторона2:</label>
+        <input type="number" id="side2" name="side2"><br>
+        <label for="side3">Сторона3:</label>
+        <input type="number" id="side3" name="side3"><br>
+    </div>
+
+<!-- output -->
+
+    <fieldset>
+        <legend>Выберите вычисляемые характеристики:</legend>
+        <input type="checkbox" id="area" name="characteristics" value="area">
+        <label for="area">Площадь</label><br>
+        <input type="checkbox" id="inRadius" name="characteristics" value="inRadius">
+        <label for="inRadius">Радиус вписанной окружности</label><br>
+        <input type="checkbox" id="height" name="characteristics" value="height">
+        <label for="height">Высоты</label><br>
+        <input type="checkbox" id="bisector" name="characteristics" value="bisector">
+        <label for="bisector">Биссектрисы</label><br>
+    </fieldset>
+    <button onclick="calculate()">Вычислить</button>
+    <button onclick="clearFields()">Очистить</button>
+
+    <div id="results">
+
+    </div>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>

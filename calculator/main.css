@@ -1,0 +1,10 @@
+.hidden {
+display: none;}
+
+.Red{
+    border: 1px solid red;
+}
+
+.error {
+    border: solid thin red;
+   }
